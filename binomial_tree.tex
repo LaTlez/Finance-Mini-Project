@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+% Define styles for bags and leafs
+\tikzstyle{bag} = [text width=2em, text centered]
+\tikzstyle{end} = []
+\begin{tikzpicture}[sloped]
+  \node (a) at (0,0) [bag] {$100$};
+  \node (b) at (4,-2) [bag] {$90$};
+  \node (c) at (4,2) [bag] {$110$};
+  \node (d) at (8,-3) [bag] {$90$};
+  \node (e) at (8,-1) [bag] {$100$};
+  \node (f) at (8,1) [bag] {$116$};
+  \node (g) at (8,3) [bag] {$122$};
+  \node (h) at (0,4.5) [bag] {$S(0)$};
+  \node (i) at (4,4.5) [bag] {$S(1)$};
+  \node (j) at (8,4.5) [bag] {$S(2)$};
+  \draw [->] (a) to node [below] {$(1-p_{*})$} (b);
+  \draw [->] (a) to node [above] {$p_{*}$} (c);
+  \draw [->] (c) to node [below] {$(1-q_{*})$} (f);
+  \draw [->] (c) to node [above] {$q_{*}$} (g);
+  \draw [->] (b) to node [above] {$r_{*}$} (e);
+  \draw [->] (b) to node [below] {$(1-r_{*})$} (d);
+\end{tikzpicture}
+\end{document}
